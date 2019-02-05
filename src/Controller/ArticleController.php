@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 
 
 class ArticleController extends AbstractController
@@ -30,6 +30,7 @@ class ArticleController extends AbstractController
             "Nine nimble noblemen nibbling nuts.",
             "Ingenious iguanas improvising an intricate impromptu on impossibly-impractical instruments."
         ];
+       
         return $this->render('article/show.html.twig', [
             'title' => ucwords(str_replace('-', ' ', $slug)),
             'comments' => $comments, 
